@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Django测试页面</title>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/csrf.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var a = $("#a").val();
+                var b = $("#b").val();
+                var c = $("#c").val();
+                $.post('{% url "django_test" %}',{'testKey':a,'testValue':b,'testTitle':c},function(ret){
+                     alert(ret)
+                 })
+             });
+         });
+    </script>
+	</head>
+	<body>
+		<!--<form method="post" action="/test/">-->
+        <form>
+            {% csrf_token %}
+			testKey   : <input type = 'test', name = 'testKey' , id = 'a' /><br>
+			testValue : <input type = 'test', name='testValue' , id = 'b'/><br>
+			testTitle : <input type = 'test', name='testTitle' , id = 'c'/><br>
+			<input type="button" value="提交" id = "add">
+		</form>
+		测试Django模板
+	</body>
+</html>
+
