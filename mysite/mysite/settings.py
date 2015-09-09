@@ -1,4 +1,4 @@
-# coding:utf-8 
+# coding:utf-8
 """
 Django settings for mysite project.
 
@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-#from mongoengine import connect 
+#from mongoengine import connect
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 if os.path.isfile('/etc/newbie/env.conf'):
@@ -34,19 +34,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'djcelery',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'djcelery',
     'django_test',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-#	'django.middleware.transaction.TransactionMiddleware',  
+#	'django.middleware.transaction.TransactionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
@@ -127,7 +128,7 @@ LOGGING = {
         'test1_handler': {
             'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename':'/home/xiaoming/Django/mysite/log/filelog.log',
+            'filename':'/home/xiaoming/django_test/lgh/mysite/log/filelog.log',
             'formatter':'standard',
         },
     },
@@ -155,7 +156,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 STATICFILES_DIRS = (
     ("downloads",os.path.join(BASE_DIR, "common_static")),
 )
- 
+
 
 
  #新的分支
