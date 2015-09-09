@@ -34,8 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    
-    'django.contrib.admin',
+    'djcelery',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -126,7 +125,7 @@ LOGGING = {
             'formatter':'standard',
         },
         'test1_handler': {
-            'level':'DEBUG',
+            'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
             'filename':'/home/xiaoming/Django/mysite/log/filelog.log',
             'formatter':'standard',
@@ -178,4 +177,14 @@ CACHES = {
     }
 }
 
-
+#队列配置
+CELERY_IMPORTS = {
+    'django_test.tasks.tasks',
+}
+import djcelery
+djcelery.setup_loader()
+BROKER_HOST = "localhost"
+BROKER_PORT = 5672
+BROKER_USER = "guest"
+BROKER_PASSWORD = "guest"
+BROKER_VHOST = "/"

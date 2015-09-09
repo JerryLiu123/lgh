@@ -4,8 +4,7 @@ from django.db import models
 #from django.utils.encoding import python_2_unicode_compatible#兼容python2
 
 # 2015年5月15日 09:19:54
-# lgh
-# mongodb的练习模型  
+# lgh  
 
 class TestModel(models.Model):
 	

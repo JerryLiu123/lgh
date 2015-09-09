@@ -1,0 +1,60 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	mysite/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+AddFrom	django_test/forms.py	/^class AddFrom(forms.Form):$/;"	c
+AuthorAdmin	django_test/admin.py	/^class AuthorAdmin(admin.ModelAdmin):$/;"	c
+BASE_DIR	mysite/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+CACHES	mysite/settings.py	/^CACHES = {$/;"	v
+DATABASES	mysite/settings.py	/^DATABASES = {$/;"	v
+DEBUG	mysite/settings.py	/^DEBUG = True$/;"	v
+DjangeTest	django_test/tests.py	/^class DjangeTest(TestCase):$/;"	c
+INSTALLED_APPS	mysite/settings.py	/^INSTALLED_APPS = ($/;"	v
+LANGUAGE_CODE	mysite/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LOGGING	mysite/settings.py	/^LOGGING = {$/;"	v
+MIDDLEWARE_CLASSES	mysite/settings.py	/^MIDDLEWARE_CLASSES = ($/;"	v
+Migration	django_test/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	django_test/migrations/0002_delete_testmodel.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	django_test/migrations/0003_testmodel.py	/^class Migration(migrations.Migration):$/;"	c
+ROOT_URLCONF	mysite/settings.py	/^ROOT_URLCONF = 'mysite.urls'$/;"	v
+STATICFILES_DIRS	mysite/settings.py	/^STATICFILES_DIRS = ($/;"	v
+STATICFILES_FINDERS	mysite/settings.py	/^STATICFILES_FINDERS = ($/;"	v
+STATIC_ROOT	mysite/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')$/;"	v
+STATIC_URL	mysite/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+TEMPLATES	mysite/settings.py	/^TEMPLATES = [$/;"	v
+TIME_ZONE	mysite/settings.py	/^TIME_ZONE = 'UTC'$/;"	v
+TestDao	django_test/testDao.py	/^class TestDao(object) :$/;"	c
+TestModel	django_test/models.py	/^class TestModel(models.Model):$/;"	c
+TestService	django_test/testService.py	/^class TestService(object):$/;"	c
+USE_I18N	mysite/settings.py	/^USE_I18N = True$/;"	v
+USE_L10N	mysite/settings.py	/^USE_L10N = True$/;"	v
+USE_TZ	mysite/settings.py	/^USE_TZ = True$/;"	v
+WSGI_APPLICATION	mysite/settings.py	/^WSGI_APPLICATION = 'mysite.wsgi.application'$/;"	v
+__str__	django_test/models.py	/^    def __str__(self):#在python3中使用__str__，在python2中使用__unicode__$/;"	m	class:TestModel	file:
+addTest	django_test/testDao.py	/^    def addTest(slef,fromValue = None):$/;"	m	class:TestDao
+addTest	django_test/testService.py	/^    def addTest(self,testModel=None):$/;"	m	class:TestService
+application	mysite/wsgi.py	/^application = get_wsgi_application()$/;"	v
+dependencies	django_test/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	django_test/migrations/0002_delete_testmodel.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	django_test/migrations/0003_testmodel.py	/^    dependencies = [$/;"	v	class:Migration
+fields	django_test/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	django_test/migrations/0003_testmodel.py	/^            fields=[$/;"	v	class:Migration
+name	django_test/migrations/0001_initial.py	/^            name='TestModel',$/;"	v	class:Migration
+name	django_test/migrations/0002_delete_testmodel.py	/^            name='TestModel',$/;"	v	class:Migration
+name	django_test/migrations/0003_testmodel.py	/^            name='TestModel',$/;"	v	class:Migration
+operations	django_test/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	django_test/migrations/0002_delete_testmodel.py	/^    operations = [$/;"	v	class:Migration
+operations	django_test/migrations/0003_testmodel.py	/^    operations = [$/;"	v	class:Migration
+response	django_test/tests.py	/^		response = self.client.post('\/test\/')$/;"	v	class:DjangeTest
+test	django_test/tests.py	/^    def test(self):$/;"	m	class:DjangeTest
+testKey	django_test/forms.py	/^    testKey = forms.IntegerField()$/;"	v	class:AddFrom
+testKey	django_test/models.py	/^    testKey = models.CharField(max_length = 20)$/;"	v	class:TestModel
+testTitle	django_test/forms.py	/^    testTitle = forms.CharField()$/;"	v	class:AddFrom
+testTitle	django_test/models.py	/^    testTitle = models.CharField(max_length = 20)$/;"	v	class:TestModel
+testValue	django_test/forms.py	/^    testValue = forms.CharField()$/;"	v	class:AddFrom
+testValue	django_test/models.py	/^    testValue = models.CharField(max_length = 20)$/;"	v	class:TestModel
+testView	django_test/views.py	/^def testView(request):$/;"	f
+urlpatterns	mysite/urls.py	/^urlpatterns = [$/;"	v
