@@ -11,6 +11,8 @@ from .testService import TestService
 from django.views.decorators.cache import cache_page
 from django.shortcuts import render
 from django.http import Http404
+from tasks.tasks import test as tasks_test#队列
+from helpers.cache import read_from_cache, write_to_cache #缓存
 
 '''
 2015年5月21日 15:48:17
@@ -21,10 +23,19 @@ lgh
 '''
 
 @transaction.non_atomic_requests
-@cache_page(60 * 15)#设置缓存时间
+#@cache_page(60 * 15)#设置缓存时间
 def testView(request):
     log=logging.getLogger('test1')#说明在使用那个logging:
     test = {}
+    #队列练习
+    tasks_test.delay(2, 2)
+    #缓存
+    if not read_from_cache("myKey"):
+        value = {"name":"test"}
+        write_to_cache("myKey", value, 600)
+    else:
+        print(read_from_cache("myKey"))
+	
     if request.method == 'POST':  #判断传递方式是否为POST
         fromValue = AddFrom(request.POST)
         if fromValue.is_valid():  #验证输入数据是否合法

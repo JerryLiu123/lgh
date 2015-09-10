@@ -128,7 +128,7 @@ LOGGING = {
         'test1_handler': {
             'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename':'/home/xiaoming/django_test/lgh/mysite/log/filelog.log',
+            'filename':'log/filelog.log',
             'formatter':'standard',
         },
     },
@@ -167,16 +167,27 @@ STATICFILES_FINDERS = (
 )
 
 #缓存
+#CACHES = {
+#    'default': {
+#        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#        'LOCATION': '/var/tmp/django_cache',
+#        'TIMEOUT': 600,
+#        'OPTIONS': {
+#            'MAX_ENTRIES': 1000
+#        }
+#    }
+#}
+#redis 缓存
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/var/tmp/django_cache',
-        'TIMEOUT': 600,
-        'OPTIONS': {
-            'MAX_ENTRIES': 1000
-        }
-    }
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '127.0.0.1:6379',
+        "OPTIONS": {
+            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
+        },
+    },
 }
+NEVER_REDIS_TIMEOUT = 7200
 
 #队列配置
 CELERY_IMPORTS = {
