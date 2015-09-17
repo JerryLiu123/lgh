@@ -17,5 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 urlpatterns = [
     url(r'^test/$', 'django_test.views.testView',name='django_test'),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^dowExcel/$', 'django_test.views.testExcel',name='django_test'),
+	url(r'^admin/', include(admin.site.urls)),
 ]
